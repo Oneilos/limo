@@ -1,15 +1,8 @@
 {
     "name": "oneilos/limo",
-    "type": "library",
-    "description": "Application mobile du logiciel Limo",
-    "keywords": ["Limo"],
-    "homepage": "http://www.limo-vtc.fr",
-    "require": {
-        "php": ">=5.3.0",
-    }
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.6-dev"
+    "autoload": {
+        "psr-0" : {
+            "oneilos\\limo" : "src"
         }
     }
 }
