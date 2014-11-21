@@ -1,0 +1,709 @@
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Signika-Semibold'), url('../modbop/font/signika-semibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../modbop/font/signika.woff') format('woff');
+}
+@font-face {
+  font-family: 'bop_icone';
+  src:   url('../modbop/font/bop_icone-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/********** A GARDER EN L'ETAT ************/
+*     {margin:0; padding:0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+html  {font-size: 100%;}
+ul    {margin-bottom:10px;}
+li    {margin-left: 25px;}
+a img {border:0;}
+.clear{clear:both;}
+.clearAfter:after {content:''; display:block; clear:both;}
+
+.icone {    font-family:'bop_icone'; }
+body {
+    background-color:#e0e0e0;
+
+}
+
+#init {
+    font:1em Signika;
+    text-align:center;
+    padding:5em 2em 2em 2em;
+}
+#init .titre{ font-size:2em;}
+
+#init .barre {
+    width:100%;
+    height:52px;
+    background-color:#fff;
+    padding:3px;
+    border:1px solid #e7e7e7;
+    border-radius: 26px;
+}
+#init .barre .progression {width:0%;height:44px; border-radius: 22px;border:1px solid #359200;
+background: rgb(67,183,0); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(67,183,0,1) 0%, rgba(110,204,57,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(67,183,0,1)), color-stop(100%,rgba(110,204,57,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(67,183,0,1) 0%,rgba(110,204,57,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(67,183,0,1) 0%,rgba(110,204,57,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(67,183,0,1) 0%,rgba(110,204,57,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(67,183,0,1) 0%,rgba(110,204,57,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43b700', endColorstr='#6ecc39',GradientType=1 ); /* IE6-9 */
+}
+
+#init .message {margin-bottom:5px;}
+#init .rechargement {
+    width:80%;
+    margin:1em auto;
+    text-decoration:none;
+    border:1px solid #FFFFFF;
+    font:1.5em Signika;
+    color:#FFFFFF;
+    padding:10px;
+    display:block;
+    text-align:center;
+    border-radius:20px;
+    background: #5e6475; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5e6475 0%, #272d40 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5e6475), color-stop(100%,#272d40)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #5e6475 0%,#272d40 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e6475', endColorstr='#272d40',GradientType=0 ); /* IE6-9 */
+    cursor:pointer;
+}
+
+#content .page {
+ padding-bottom:100px;
+ margin-top:55px;
+}
+
+#content .page {
+    display:none;
+}
+
+
+#content {
+    color:#242b3b;
+    font:1em Signika;
+}
+#menu {
+    background-color:#262d40;
+    color:#FFFFFF;
+    font:1.1em Signika;
+    position:fixed;
+    top:0;
+    height:50px;
+    width:100%;
+  /*  display:none;*/
+}
+#menu .titre {
+    text-align:center;
+    line-height:50px;
+    float:left;
+}
+
+.P_Gen_Mission.fAction #menu .titre #nbMission,
+.P_Com_Commande.fAction #menu .titre #nbMission,
+.P_Geo_Lieu.fAction #menu .titre #nbMission
+{
+    display:none;
+} 
+
+#menu .btn {
+    width:50px;
+    height:50px;
+    text-align:center;
+    background-color:#5f6575;
+    float:right;
+    margin-right:5px;
+    font-size:1.3em;
+    line-height:50px;
+    display:none;
+    cursor:pointer;
+}
+#menu .btn.retour {float:left;}
+
+
+#menu .JafEveSynchro {
+    float:left;    
+    left:10px;
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    background-color:#888888;
+    margin:5px;
+}
+
+#menu .JafEveSynchro.synchro_ok {background-color:#008000;}
+#menu .JafEveSynchro.synchro_ko {background-color:#A00000;}
+ 
+/*   ----------------- POPUP ----------------------*/
+
+#popups {
+    background-color:#262d40;
+    font:1em Signika;
+    position:absolute;
+    top:50px;
+    width:100%;
+}
+#popups .popup {
+    padding:10px;
+    display:none;
+    margin-bottom:20px;
+}
+#popups .popup p {
+    color:#FFF;
+    text-align:center;
+}
+
+
+#popups  .formulaire {width:80%; padding:0.5em; background:#fff; margin:0 auto;}
+
+/* ------------------- BOUTONS ------------------------------*/
+.boutonBas {clear:both;
+    margin-top:10px;
+    bottom:0px;
+    border:1px solid #d3d3d3; box-shadow:0 0 1px #fff inset;
+    width:100%; padding-top:1px;
+    text-align:center;
+    z-index:20;
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(top,  #f0f0f0 0%, #fefefc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#fefefc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f0f0f0 0%,#fefefc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f0f0f0 0%,#fefefc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f0f0f0 0%,#fefefc 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f0f0f0 0%,#fefefc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#fefefc',GradientType=0 ); /* IE6-9 */
+}
+.boutonBas .btn {width:15%; height:60px; padding-top:0.5em; display:inline-block; border-left:1px solid #d4d4d4; border-right:1px solid #d4d4d4; cursor:pointer; font-size:0.795em; text-align:center; box-shadow:0 0 1px #f6f6f6 inset;}
+.boutonBas .btn .icone{width:34px; display:inline-block; margin:0.5em 0; font-size:1.1em; line-height:32px; text-align:center; color:#fff; border-radius:17px;}
+.boutonBas .btn.enregistrer .icone,
+.boutonBas .btn.retirer .icone
+{border:1px solid #b14255; box-shadow:1px 1px 1px #e75d6d inset;
+background: #d2475c; /* Old browsers */
+background: -moz-linear-gradient(top,  #d2475c 0%, #b14255 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2475c), color-stop(100%,#b14255)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d2475c 0%,#b14255 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d2475c 0%,#b14255 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d2475c 0%,#b14255 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d2475c 0%,#b14255 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2475c', endColorstr='#b14255',GradientType=0 ); /* IE6-9 */
+}
+.boutonBas .btn.saveOk .icone{border:1px solid #1e9d2a; box-shadow:1px 1px 1px #77df83 inset;
+background: #55c960; /* Old browsers */
+background: -moz-linear-gradient(top,  #55c960 0%, #1e9d2a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#55c960), color-stop(100%,#1e9d2a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #55c960 0%,#1e9d2a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #55c960 0%,#1e9d2a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #55c960 0%,#1e9d2a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #55c960 0%,#1e9d2a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55c960', endColorstr='#1e9d2a',GradientType=0 ); /* IE6-9 */
+}
+.boutonBas .btn.alleretour .icone,
+.boutonBas .btn.ajout .icone{border:1px solid #3773a9; box-shadow:1px 1px 1px #61b5e4 inset;
+background: #488dd2; /* Old browsers */
+background: -moz-linear-gradient(top,  #488dd2 0%, #3773a9 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#488dd2), color-stop(100%,#3773a9)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #488dd2 0%,#3773a9 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#488dd2', endColorstr='#3773a9',GradientType=0 ); /* IE6-9 */
+}
+ 
+
+/*   ----------------- PAGE ----------------------*/
+.page .formulaireInt {padding:0;} 
+.page .barreTitre {
+background: #498fd1; /* Old browsers */
+background: -moz-linear-gradient(top,  #498fd1 0%, #3473a8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#498fd1), color-stop(100%,#3473a8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #498fd1 0%,#3473a8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #498fd1 0%,#3473a8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #498fd1 0%,#3473a8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #498fd1 0%,#3473a8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#498fd1', endColorstr='#3473a8',GradientType=0 ); /* IE6-9 */
+    border: 3px solid #FFFFFF;
+    border-radius: 15px;
+    font-size: 1em;
+    line-height: 13px;
+    margin:0 10px 8px;
+    padding: 3px;
+    text-align: center;
+    color:#fff;
+    line-height: 20px;
+    width:auto;
+}
+
+/*   ----------------- FORM ----------------------*/
+.formulaire .box          {width:49.4652%; margin-bottom:10px;} 
+.formulaire .box:nth-of-type(odd)         {float:left;} 
+.formulaire .box:nth-of-type(even)          {float:right;} 
+
+.formulaire .row                         {margin-bottom:1px;}
+.formulaire .box.row                  {margin-bottom:10px;}
+.formulaire .row:after               {content:''; display:block; clear:both;}
+.formulaire .row_are textarea    {width:100%; height:40px; background:#ffffff; border:1px solid #95a5b5;}
+.formulaire .row_are label          {width:100%; padding-left:5px;}
+
+.formulaire .row_are label,
+.formulaire .row label                  {background:#eef1f6; font-size:0.8em; line-height:40px; font-style:italic;}
+
+.formulaire .row label                  {width:29.7297%; float:left; text-align:right; padding-right:5px; line-height: 40px; white-space: nowrap;}
+.formulaire .row input,
+.formulaire .row select                {width:70.2702%; float:left; height:40px; background:#ffffff; border:1px solid #95a5b5;}
+.formulaire .row_bt .submit        {width:100%; margin-top:1em; font-size:1.3em; line-height:40px; background:#015fc1; border:none; color:#fff; text-transform:uppercase; text-align:center;cursor:pointer;}
+.formulaire input,
+.formulaire select, 
+.formulaire textarea                    {font-size:1.2em;}
+
+.vol {background-color:#556179; padding:0 0.3em; border-radius:3px; color:#efefef; line-height:20px;}
+.vol .numero  {float:left; font-weight:600;}
+.vol .heure   {float:right; line-height:20px;}
+.vol .heure span   {display:inline-block; border-radius:3px; margin:2px 0 2px 2px; padding:0 2px; line-height:16px;}
+.vol .heure .retard_vol   {background:#9b0000;}
+.vol .heure .avance_vol   {background:#2cb659;}
+
+
+/* ****** ZONE CLIENT ****** */
+.zoneClient           {background:#262d40; padding:0.5em; font-size:0.8em; color:#fff; margin-bottom:10px;} 
+.zoneClient .coordonnees                 {width:70%; float:left;} 
+.zoneClient .coordonnees  div           {line-height:1.5em;} 
+.zoneClient .societe                         {font-weight:600; text-transform:uppercase;} 
+.zoneClient .contact                         {font-style:italic;} 
+.zoneClient .contact_tel a,
+.zoneClient .contact_mob a               {text-decoration:underline; color:#fff;} 
+.zoneClient .montant_dossier           {width:24%; float:right; background:#f5f5f5; border-radius:20px; padding:2px;} 
+.zoneClient .int_montant_dossier    {
+border:2px solid #11141f; 
+padding:0.5em 0;  
+border-radius:20px; 
+text-align:center;
+background: #787c8b; /* Old browsers */
+background: -moz-linear-gradient(top,  #787c8b 0%, #11141f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#787c8b), color-stop(100%,#11141f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #787c8b 0%,#11141f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #787c8b 0%,#11141f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #787c8b 0%,#11141f 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #787c8b 0%,#11141f 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#787c8b', endColorstr='#11141f',GradientType=0 ); /* IE6-9 */
+} 
+.zoneClient .int_montant_dossier .titre {font-size:0.795em; line-height:1.5em;}
+.zoneClient .montant_dossier .montant_ttc  label {font-size:0.9em;} 
+.zoneClient .montant_dossier .montant_ttc  span {font-weight:bold;} 
+
+/* ****** ZONE DOSSIER ****** */
+.formulaireInt .libDossier    {width:14.9732%; float:left; background:#eef1f6; margin:15px 15px 10px 0; font:400 0.8em/38px Signika; border:1px solid #adb3bf; box-shadow:0 0 6px #b8c2cf inset; border-radius:20px; text-align:center;} 
+.formulaireInt .libDossier .dossier  {} 
+.formulaireInt .libDossier .numero    {width:24px; background:#262d40; display:inline-block; line-height:24px; color:#fff; text-align:center; border-radius:12px;} 
+.formulaireInt .libDossier .version   {color:#63666d;} 
+
+/* ****** ZONE STATUT ****** */
+.formulaireInt  .statut                                 {background:#ffffff; padding:2px; border:1px solid #d6d6d8; border-radius:20px;} 
+.formulaireInt  .statut .statutInt               {background:#eef1f6; border:1px solid #adb3bf; box-shadow:0 0 6px #b8c2cf inset; border-radius:20px;}
+.formulaireInt  .statut .statutInt label       {width:32.5842%; background:none; font-style:normal; line-height:32px; height:32px;}
+.formulaireInt  .statut .statutInt select     {width:67.4157%; font-size:0.8em; background:none; border:none; height:32px;}
+
+
+/*   ----------------- LISTE ----------------------*/
+#content.lAction.P_Gen_Mission   #menu .btn.recherche,
+#content.lAction.P_Gen_Mission   #menu .btn.ajout,
+#content.lAction.P_Gen_Mission   #menu .btn.outils 
+ {display:block;}
+
+#content.lAction.P_Gen_Mission  #liste ,
+#content.fAction.P_Com_Commande #liste {
+    display:block;
+}
+#content.fAction.P_Com_Commande #liste .barreTitre {
+    display:none;
+}
+
+#content.fAction.P_Com_Commande #liste {
+ margin-top:0px;
+}
+
+#liste {
+    padding:0px;
+    display:none;
+}
+
+
+
+#liste .mission             {height:65px;cursor:pointer;}
+#liste  .mission.td01   {background-color:#ffffff;}
+#liste  .mission.td02   {background-color:#e0e0e0;}
+#liste  .mission:hover.td01   {background-color:#c0c0c0c0;}
+#liste  .mission:hover.td02   {background-color:#c0c0c0c0;}
+
+#liste .cel {
+    float       : left;
+    height      : 65px;
+    text-align  :center; font-size:0.8em;
+}
+#liste .cel.chauffeur {width  : 12.0320%; padding:0.5em; color:#FFFFFF; text-align:center; 
+    background: #5e6475; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5e6475 0%, #272d40 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5e6475), color-stop(100%,#272d40)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #5e6475 0%,#272d40 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e6475', endColorstr='#272d40',GradientType=0 ); /* IE6-9 */
+}
+#liste .cel.chauffeur .icone {font-size:2em;}
+
+#liste .cel.libelle           {width : 10.1604%;}
+#liste .celPhone                {width : 75.1335%; float:left;}
+#liste .cel.infoDate         {width : 13.3689%;}
+#liste .cel.client            {width : 13.3689%;}
+#liste .cel.lieu                {width : 73.2622%;}
+#liste .cel.smi                  {width :  2.6737%;}
+
+#liste .cel.libelle .numDossier                   {background:#eef1f6; text-align:center; line-height:43px;}
+#liste .cel.libelle .numDossier .numero      {background:#262d40; width: 24px; line-height:24px; color:#fff; display:inline-block; border-radius:12px; behavior:url(css/PIE.htc);}
+#liste .cel.libelle .tve                                {background:#95a5b5; text-align:center; line-height:22px; color:#fff; clear:both; }
+
+#liste .cel.infoDate {padding-top:0.4em; text-align:center;}
+#liste .cel.infoDate .jour       {display:inline-block; width:36px; margin:0 4px 4px 0; background:#262d40; color:#fff; line-height:17px; border-radius:4px; behavior:url(css/PIE.htc);}
+#liste .cel.infoDate .numero    {display:inline-block; margin-right:2px;}
+#liste .cel.infoDate .mois       {color:#94979e;}
+#liste .cel.infoDate .heure_france       {line-height:0.95em;}
+#liste .cel.infoDate .heure_locale       {text-align:center; font-style:italic; font-size:0.785em; color:#54596c;}
+#liste .cel.infoDate .etranger .heure_locale       {display:block; margin-top:-4px;}
+#liste .cel.infoDate .weekend .jour       {background:#3879B1;}
+
+#liste .cel.client {width:13.3689%; padding:0.5em; color:#FFFFFF;
+    background: #5e6475; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5e6475 0%, #272d40 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5e6475), color-stop(100%,#272d40)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #5e6475 0%,#272d40 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e6475', endColorstr='#272d40',GradientType=0 ); /* IE6-9 */
+}
+
+#liste .cel.lieu {padding:0.5em; text-align:left; overflow:hidden;}
+
+#liste .cel.smi {color:#FFFFFF; line-height:65px; 
+background: -moz-linear-gradient(top,  rgba(229,229,229,0) 0%, rgba(35,35,35,0.5) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,229,229,0)), color-stop(100%,rgba(35,35,35,0.5))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(35,35,35,0.5) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(35,35,35,0.5) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(35,35,35,0.5) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(229,229,229,0) 0%,rgba(35,35,35,0.5) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#80232323',GradientType=0 ); /* IE6-9 */
+}
+
+/*   ----------------- FICHE ----------------------*/
+#content.P_Gen_Mission.fAction #fiche {
+    display:block;
+}
+
+#content.P_Gen_Mission.fAction #menu .btn.retour,
+#content.P_Geo_Lieu.fAction      #menu .btn.retour,
+#content.P_Gen_Mission.fAction #menu .btn.suivi,
+#content.P_Gen_Mission.fAction #menu .btn.frais,
+#content.P_Gen_Mission.fAction #menu .btn.demande {
+    display:inline-block;
+}
+#content.P_Gen_Mission.fAction #menu .titre {
+    display:none;
+}
+#content.P_Gen_Mission.fAction #menu .btn.homepage {
+    display:inline-block;
+}
+
+#fiche .box textarea {display:block;}
+
+#fiche .formulaireInt  .statut      {width:100%;} 
+#fiche .zoneClient           {width:100%;} 
+
+
+/* Heures */
+#fiche .mission .row .heure_fin{width:10.8008%;}
+#fiche .mission .row #MIS_HEURE_DEBUT,
+#fiche .mission .row #MIS_HEURE_FIN {width:29.7297%;}
+
+/* Prise en charge et Destination */
+#fiche .mission .row.lieu label                            {width:100%; background:#5f6576; float:none; display:block; font:italic 0.8em/40px Signika; color:#fff; text-align:left; padding-left:5px; margin-bottom:1px;}
+#fiche .mission .row.lieu .lieuDetail                {width:100%; background:#ffffff; height:70px; padding:0.2em; font-size:0.8em; border:1px solid #95a5b5;}
+#fiche .mission .row.lieu .lieuDetail .libelle {width:100%; background:none;}
+
+/* Téléphone du chauffeur */
+#fiche .mission .row.tel_chauffeur a {width:70.2702%; float:left; background:#ffffff; border:1px solid #95a5b5; font-size:0.8em; line-height:38px; padding-left:0.5em; color:#4990d1;}
+
+/* Passager et Note au chauffeur */
+#fiche .mission .row_are.passager label,
+#fiche .mission .row_are.note label         {display:block; margin-bottom:1px;}
+#fiche .mission .row_are.passager textarea,
+#fiche .mission .row_are.note textarea   {height:81px;}
+
+#fiche .mission .montant_mission {clear:both; text-align:center; padding:1em 0;}
+
+/* Bouton */
+#fiche .statuts {clear:both; width:100%; margin-bottom: 6.5em;
+}
+#fiche .statuts .btn {width:30%; font-size:0.75em; text-align:center; padding-bottom:4px; color:#000; text-decoration:none; height:82px; border:1px solid #d3d3d3; box-shadow:0 0 1px #fff inset; margin:0 auto;
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(top,  #f0f0f0 0%, #FFFFFF 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f0f0f0 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f0f0f0 0%,#FFFFFF 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f0f0f0 0%,#FFFFFF 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f0f0f0 0%,#FFFFFF 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+}
+#fiche .statuts .btn .icone{width:34px; display:inline-block; margin:0.5em 0; font-size:1.1em; color:#fff !important; line-height:32px; text-align:center; color:#fff; border-radius:17px; border:1px solid #3773a9; box-shadow:1px 1px 1px #61b5e4 inset;
+background: #488dd2; /* Old browsers */
+background: -moz-linear-gradient(top,  #488dd2 0%, #3773a9 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#488dd2), color-stop(100%,#3773a9)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #488dd2 0%,#3773a9 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#488dd2', endColorstr='#3773a9',GradientType=0 ); /* IE6-9 */}
+
+
+
+/* --------------------- LIEU ------------------------------ */
+#lieu .libelleLieu {display:none;}
+#lieu.lieuPositionner .libelleLieu {display:block;}
+#lieu .lieu {padding:10px;}
+#lieu .row.recherche {background:#fff; padding:0.4em; margin-bottom:10px;}
+#lieu .row.recherche label {width:20%; line-height:35px;}
+#lieu .row.recherche input {width:80%;  height:35px;}
+
+#lieu.lieuPositionner .recherche ,
+#lieu.lieuPositionner .ListeLieu ,
+#lieu.lieuPositionner .formAdresse { display:none}
+
+.table {width:100%; margin-bottom:10px;}
+.table .tr{width:100%;display:table;}
+.table .td ,
+.table .th{display:table-cell; padding:0.5em; font-size:0.8em; color:#fff; vertical-align:middle;}
+.table .th{background:#262d40; font-style:italic;}
+.table .td{border-top:1px solid #e1dfe0;}
+.table .ligne0 .td{background:#5f6575;}
+.table .ligne1 .td{background:#7a8296;}
+.table .libelle{width:33.4224%;}
+.table .adresse{width:66.5775%;}
+.table .td.libelle{border-right:1px solid #e1dfe0;}
+.table .td.adresse{border-left: 1px solid #e1dfe0;}
+
+#lieu .infovol .label_divers      {width:100%; background:#5f6576; padding-left:0.5em; font:italic 0.8em/40px Signika; color:#fff; margin-bottom:1px;}
+#lieu .infovol .flightstat          {width:100%; background:#ffffff; padding:0.5em; height:82px; margin-bottom:1px; text-align:center;}
+#lieu .infovol .flightstat img    {display:inline-block;}
+#lieu .infovol.typeLieu_3 .flightstat,
+#lieu .infovol.typeLieu_2 .flightstat,
+#lieu .infovol.typeLieu_3 #AIRPORT,
+#lieu .infovol.typeLieu_3 #HEURE_TRANSPORT    {display:none}
+#lieu .infovol .vol,
+#lieu .infovol .train {
+    display:none;
+}
+#lieu .infovol.typeLieu_1 .vol { display:inline }
+#lieu .infovol.typeLieu_2 .train { display:inline }
+
+#lieu .libelleLieu {background:#262d40; padding:0.8em; color:#fff;}
+#lieu .box.formAdresse {float:left;}
+#lieu .box.infovol {float:right;}
+
+#content.fAction.P_Geo_Lieu #lieu {
+    display:block;
+}
+
+#outils a {
+    width:80%;
+    margin:1em auto;
+    text-decoration:none;
+    border:1px solid #FFFFFF;
+    font:1.5em Signika;
+    color:#FFFFFF;
+    padding:10px;
+    display:block;
+    text-align:center;
+    border-radius:20px;
+    background: #5e6475; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5e6475 0%, #272d40 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5e6475), color-stop(100%,#272d40)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #5e6475 0%,#272d40 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #5e6475 0%,#272d40 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e6475', endColorstr='#272d40',GradientType=0 ); /* IE6-9 */
+}
+
+#message {
+    clear:both;
+    margin:10px;
+    border:1px solid #888;
+    background-color:#FFFFD0;
+    padding:10px;
+    display:none;
+}
+#message textarea[name=message] {
+    width:100%;
+    height:200px;
+    font-size:0.75em;
+    padding:5px;
+}
+
+#debugBt {
+    width:100%;
+    font-size:1.5em;
+    height:40px;
+    background-color:#800000;
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+}
+/*   ----------------- DOSSIER ----------------------*/
+
+#content.P_Com_Commande.fAction #dossier {
+    display:block;
+    padding-bottom:0px;
+}
+
+#content.P_Com_Commande.lAction #menu .btn.ajout ,
+#content.P_Com_Commande.fAction #menu .btn.retour
+ {
+    display:inline-block;
+}
+
+#dossier  .zoneClient           {width:53.4759%; float:left;} 
+#dossier  .SCO_LIBELLE         {width:45%; float:right; margin:15px 0 10px;} 
+#dossier  .SCO_LIBELLE .statutInt                {line-height:32px; font-size:0.8em;} 
+#dossier  .SCO_LIBELLE .statutInt .icone     {display:inline-block; line-height:32px; margin: 0 10px 0 15px;} 
+#dossier .row_are.demande {clear:both; margin-bottom:15px;}
+#dossier .row_are.demande label {display:block; margin-bottom:1px;}
+#dossier .row_are.demande textarea {height:150px;}
+
+#dossier .statuts {clear:both;margin-bottom:100px;}
+#dossier .statuts .btn{ width:30%; float:left; margin:0 1.6%; border:1px solid #d3d3d3; box-shadow:0 0 1px #fff inset; 
+background: #f0f0f0; /* Old browsers */
+background: -moz-linear-gradient(top,  #f0f0f0 0%, #FFFFFF 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f0f0f0 0%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f0f0f0 0%,#FFFFFF 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f0f0f0 0%,#FFFFFF 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f0f0f0 0%,#FFFFFF 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+}
+#dossier .statuts .btn a{display:block; font-size:0.75em; text-align:center; padding-bottom:4px; color:#000; text-decoration:none; height:82px;}
+#dossier .statuts .btn a .icone{width:34px; display:inline-block; margin:0.5em 0; font-size:1.1em; color:#fff !important; line-height:32px; text-align:center; color:#fff; border-radius:17px; border:1px solid #3773a9; box-shadow:1px 1px 1px #61b5e4 inset;
+background: #488dd2; /* Old browsers */
+background: -moz-linear-gradient(top,  #488dd2 0%, #3773a9 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#488dd2), color-stop(100%,#3773a9)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #488dd2 0%,#3773a9 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #488dd2 0%,#3773a9 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#488dd2', endColorstr='#3773a9',GradientType=0 ); /* IE6-9 */}
+
+
+/* ---------------------- CREEATION ---------------------- */
+#creationDossier h2  {width:100%; background:#5f6576; font:1.1em/40px Signika; color:#fff; padding-left:5px; margin:5px 0 1px;}
+
+
+/* ---------------------- SMARTPHONE ---------------------- */
+@media(max-width: 640px) {
+#menu .titre {text-align:left; font-size:0.8em; line-height:1em; padding-top:0.4em;} 
+#menu .titre #nbMission {display:block;} 
+
+/* ****** POPUP ****** */
+#popups .formulaire {width:95%;}
+
+/* ****** LISTE ****** */
+#liste .mission ,
+#liste .cel {height:100px;}
+
+#liste .cel.chauffeur                    {text-align:center; padding:1.5em 0.1em 0;}
+#liste .cel.chauffeur,
+#liste .cel.libelle                       {width:14%;}
+#liste .celPhone                            {width:67%;}
+#liste .cel.smi                              {width:5%;}
+#liste .cel.libelle .numDossier   {line-height:2em; height:75px; padding-top:0.5em;}
+#liste .cel.libelle .tve               {line-height:25px;}
+
+#liste .celPhone                            {height:100px; padding:0.4em; overflow:hidden;}
+#liste .celPhone .cel                    {float:none; height:auto;}
+#liste .celPhone .cel.infoDate    {width : 100%;}
+#liste .celPhone .cel.client       {width : 100%;}
+#liste .celPhone .cel.lieu           {width : 100%;}
+
+#liste .cel.infoDate {padding-top:0; text-align:left;}
+#liste .cel.infoDate .etranger,
+#liste .cel.infoDate .france    {width:50%; float:left;}
+#liste .cel.infoDate .heures    {width:50%; float:right; text-align:right;}
+#liste .cel.infoDate .jour       {text-align:center;}
+#liste .cel.infoDate .heure_france       {display:inline;}
+#liste .cel.infoDate .heure_locale       {text-align:left;}
+#liste .cel.infoDate .heure_locale:before       {content:'('}
+#liste .cel.infoDate .heure_locale:after         {content:')'}
+#liste .cel.infoDate .etranger .heure_locale       {display:inline; margin-top:0;}
+
+#liste .cel.client     {color:#242b3b; background: none; text-align:left; font-weight:700; padding:0; margin-bottom:0.2em;}
+#liste .cel.lieu         {padding:0; line-height:1em;}
+#liste .cel.lieu .vol {margin-top:2px;}
+
+#liste .cel.smi          {font-size:1.2em; line-height:100px; font-weight:700;}
+
+/* ****** FORM ****** */
+.formulaire .box          {width:100%; margin-bottom:10px;} 
+.formulaire .box:nth-of-type(odd),
+.formulaire .box:nth-of-type(even)          {float:none;} 
+
+.formulaire .row label                  {width:36.6666%;}
+.formulaire .row input,
+.formulaire .row select                {width:63.3333%;}
+
+/* ****** FICHE ****** */
+.zoneClient                                {width:100%; float:none;} 
+.zoneClient .coordonnees          {width:60%;} 
+.zoneClient .montant_dossier   {width:38%;} 
+
+.formulaireInt .libDossier    {width:36.6666%; margin:0 0 10px;} 
+.formulaireInt .statut           {width:100%; margin:0; float:none;} 
+
+/* Heures */
+#fiche .mission .row .heure_fin{width:36.6666%; clear:both;}
+#fiche .mission .row #MIS_HEURE_DEBUT,
+#fiche .mission .row #MIS_HEURE_FIN {width:63.3332%;}
+#fiche .mission .row .heure_debut,
+#fiche .mission .row #MIS_HEURE_DEBUT{margin-bottom:1px;}
+
+/* Téléphone du chauffeur */
+#fiche .mission .row.tel_chauffeur a {width:63.3333%;}
+
+.boutonBas .btn {width:30%; height:80px; padding-top:0.5em; }
+
+/* ****** LIEU ****** */
+#lieu .row.recherche label {width:100%; text-align:left; padding-left:0.5em; font-size:1em;}
+#lieu .row.recherche input {width:100%;}
+#lieu .infovol .flightstat img    {width:100%; max-height:75px;}
+#lieu .box.formAdresse,
+#lieu .box.infovol {float:none;}
+
+/* ****** DOSSIER ****** */
+#dossier .formulaireInt .statut           {margin-bottom:10px;} 
+#dossier .zoneClient,
+#dossier  .SCO_LIBELLE {width:100%; float:none;} 
+#dossier  .SCO_LIBELLE {margin-top:0;} 
+}
+
