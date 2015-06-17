@@ -1,8 +1,0 @@
-{
-    "name": "oneilos/limo",
-    "autoload": {
-        "psr-0" : {
-            "Oneilos\\Limo" : "src"
-        }
-    }
-}

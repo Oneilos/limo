@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-<!-- saved from url=(0041)http://dev.limovtc.fr/mobilimo/index.html -->
-<html class="no-js FR" lang="FR" manifest="manifest.php?p=1415197787"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!--<base href="http://dev.limovtc.fr/">--><base href=".">
-        <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>MOBILIMO</title> 
-        <link href="./index_files/mobilimo.1415880571.css" media="screen" rel="stylesheet" type="text/css">
-<link href="./index_files/jquery-ui.1401268557.css" media="screen" rel="stylesheet" type="text/css">
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7 FR" lang="FR"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8 FR" lang="FR"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9 FR" lang="FR"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10 FR" lang="FR"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js FR" lang="FR" manifest="manifest.php?p=1434554797"> <!--<![endif]-->
+    <head>
+                <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+        <title>LD v1.0</title> 
+        
         <!--[if gte IE 9]> <style type="text/css" media="screen">
 .gradient{filter:none;}
 </style><![endif]-->
     
     <!--[if lte IE 8]> <script type="text/javascript" src="/jquery/html5shiv.js"></script><![endif]-->
-            
-
-
-        <script type="text/javascript" src="./index_files/jquery-1.8.3.min.1385292616.js"></script>
-<script type="text/javascript" src="./index_files/jquery-ui-1.8.24.min.1385292616.js"></script>
-<script type="text/javascript" src="./index_files/mustache.min.1385292616.js"></script>
-<script type="text/javascript" src="./index_files/jquery.jaf.1416569589.js"></script>
-<script type="text/javascript" src="./index_files/configConcepts.1416577582.js"></script>
-<script type="text/javascript" src="./index_files/mobilimo.1416583839.js"></script>
-<script type="text/javascript" src="./index_files/flightstat.1409581532.js"></script>
-
-<script type="text/javascript">
-//<!--
-$(document).ready(function() {
-    Jaf.tm.dossier = 'mobilimo';
-Jaf.tm.require_new('mobilimo.1408628441.tml');
-
-});
-//-->
-
-</script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./index_files/apple-touch-icon-114x114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://dev.limovtc.fr/mobilimo/apple-touch-icon-72x72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="http://dev.limovtc.fr/mobilimo/apple-touch-icon-precomposed.png">
-<link rel="shortcut icon" type="image/x-icon" href="http://dev.limovtc.fr/mobilimo/favicon.ico">
-<link rel="shortcut icon" type="image/png" href="http://dev.limovtc.fr/mobilimo/favicon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" type="image/png" href="favicon.png" />
+<link href="css/ld.css" media="screen" rel="stylesheet" type="text/css" >
+<link href="css/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-ui-1.8.24.min.js"></script>
+<script type="text/javascript" src="jquery/mustache.min.js"></script>
+<script type="text/javascript" src="js/jaf.kernel.js"></script>
+<script type="text/javascript" src="js/jaf.cm.js"></script>
+<script type="text/javascript" src="js/jaf.eve.js"></script>
+<script type="text/javascript" src="js/jaf.tm.js"></script>
+<script type="text/javascript" src="js/gds.js"></script>
+<script type="text/javascript" src="js/lib/select.js"></script>
+<script type="text/javascript" src="js/lib/concept.js"></script>
+<script type="text/javascript" src="js/lib/controller.js"></script>
+<script type="text/javascript" src="js/jfo.js"></script>
+<script type="text/javascript" src="js/ld.js"></script>
+<script type="text/javascript" src="js/dictionnaire.js"></script>
 </head>
-<body class="has800">
-    
+<body id="conteneur">
     <div id="init">
-        <img src="./index_files/apple-touch-icon-114x114-precomposed.png">
-        <div class="titre">Mobilimo v1.4.1</div>
-        <div class="message">Veuillez patientez pendant le chargement des données</div>
+        <img src="apple-touch-icon-114x114-precomposed.png">
+        <div class="titre">%DIC_LIMO_DRIVER%</div>
+        <div class="message">%DIC_VEUI_PAT_CHAR%</div>
         <div class="barre"><div class="progression"></div></div>
-        <a href="" class="rechargement" onclick="javascript:Mobi.openPopup(&#39;login&#39;);return false;">Si vous souhaitez vous reconnectez cliquez-ici</a>
-        <div class="infos"></div>
+        <div class="infos"></div> 
     </div>
     
     <div id="content">
@@ -56,39 +51,100 @@ Jaf.tm.require_new('mobilimo.1408628441.tml');
             <div class="icone btn retour">.</div>
             <div class="JafEveSynchro"></div>
             <div class="titre">
-                <span class="texte">Mobilimo v1.4.1</span>
+                <span class="texte">%DIC_LIMO_DRIVER%</span>
                 <span id="nbMission"></span>
             </div>
             <div class="icone btn homepage">á</div>
             <div class="icone btn outils">ë</div>
-            <div class="icone btn demande">Á</div>
+            <div class="icone btn liste">¿</div>
             <div class="icone btn recherche">b</div>
-            <div class="icone btn ajout">i</div>
-            <div class="icone btn suivi">ù</div>
         </div> 
         
-        
-        <div id="fiche" class="page fAction"></div>
+        <div id="home" class="page lAction">
+            
+            <div class="zoneBouton">
+ 
+                <div class="cel infoLieu">
+                    <div class="numDossier">
+                        <span class="dossier" data-role="MIS_COM_ID"></span> 
+                        <span class="numero"  data-role="MIS_NUMERO"></span> 
+                        <span class="version" data-role="MIS_VERSION"></span>
+                    </div>
+                    <div class="zoneDate"    data-role="zoneDate"></div>
+                    <div class="zoneAdresse" data-role="lieu"></div>
+                    <div class="nomLimo" data-role="limo"></div>
+                    <span class="fleche"></span>
+                </div>
 
-        <div id="dossier" class="page fAction"></div>
+                <div class="grosBouton">
+                    <div class="intGrosBouton">
+                        <div class="Btn">
+                            <div class="icone" data-role="iconeBouton"></div>
+                            <div class="label" data-role="titreBouton"></div>
+                        </div>
+                    </div>
 
-        <div id="lieu" class="page fAction"></div>
+                    <div class="petitBouton reglement">
+                        <div class="intPetitBouton" data-role="reglement"></div>
+                    </div>
+
+                    <div class="petitBouton gauche">
+                        <div class="intPetitBouton" data-role="boutonGauche"></div>
+                    </div>
+
+                    <div class="petitBouton droit">
+                        <div class="intPetitBouton"  data-role="boutonDroit"></div>
+                    </div>
+
+                </div>
+                <div class="zonePassager"></div>
+
+            </div>
+            
+            <div class="boutonBas"> 
+                <div class="btn confirmer">
+                    <div class="chiffre" data-role="confirmer"></div>
+                    <div class="label">%DIC_A_CONFIRMER%</div>
+                </div>
+                <div class="btn modifier">
+                    <div class="chiffre" data-role="modifier"></div>
+                    <div class="label">%DIC_MODIFIEES%</div>
+                </div>
+                <div class="btn cloturer">
+                    <div class="chiffre" data-role="cloturer"></div>
+                    <div class="label">%DIC_A_FERMER%</div>
+                </div>
+            </div>
+
+        </div>
         
-        <div id="liste" class="page lAction">
+        <div id="fiche"        class="page fAction"></div>
+
+        <div id="frais"        class="page fAction"></div>
+
+        <div id="kmEtHeure"    class="page fAction"></div>
+
+        <div id="recipice"     class="page fAction"></div>
+
+        <div id="reglement"    class="page fAction"></div>
+        
+        <div id="googleAgenda" class="page fAction"></div>
+        
+        <div id="liste"    class="page lAction">
             <div class="barreTitre"></div>
             <div id="listeContent"></div>
         </div>
         
-        <div id="message" class="formulaire" style="overflow: hidden; display: block;">
+        <div id="message" class="formulaire">
             <div class="row_are">
-                <label>Log</label>
+                <label>%DIC_LOG%</label>
                 <textarea name="message"></textarea>
             </div>
             <div class="row_bt">
-                <div class="submit razBt">RAZ</div> 
+                <div class="submit razBt">%DIC_RAZ%</div> 
             </div>
             <div class="row_bt">
-                <div class="submit debugBt">Lancer le debuggage</div> 
+                <div class="submit debugBt">%DIC_LANCER_DEBUG%</div> 
             </div>
         </div> 
          
@@ -99,22 +155,25 @@ Jaf.tm.require_new('mobilimo.1408628441.tml');
     
     <div id="popups">
 
-        <div id="login" class="popup" style="overflow: hidden; display: block;">
+        <div id="login" class="popup">
             <div class="formulaire">
                 <div class="row">
-                    <label>Votre limo http://</label>
-                    <input type="text" name="site" id="connexion_site" value="">
+                    <label>%DIC_LOGIN% : </label>
+                    <input type="email" name="login" id="connexion_login" value="">
                 </div>
                 <div class="row">
-                    <label>Login : </label>
-                    <input type="text" name="login" id="connexion_login" value="">
-                </div>
-                <div class="row">
-                    <label>Mot de passe : </label>
+                    <label>%DIC_MOT_DE_PASSE% : </label>
                     <input type="password" name="mdp" value="">
                 </div>
+                <div class="row">
+                    <label>%DIC_LANGAGE% : </label>
+                    <select name="LAN_CODE" id="LAN_CODE">
+                        <option value="FR" selected="selected">Français</option>
+                        <option value="EN">English</option>
+                    </select>
+                </div>
                 <div class="row_bt">
-                    <div class="submit" id="bt_login">Connexion</div> 
+                    <div class="submit" id="bt_login">%DIC_CONNEXION%</div> 
                 </div> 
             </div>
         </div>
@@ -122,113 +181,417 @@ Jaf.tm.require_new('mobilimo.1408628441.tml');
         <div id="recherche" class="popup">
             <div class="formulaire">
                 <div class="row">
-                    <label>Date de début : </label>
+                    <label>%DIC_DATE_DEBUT% : </label>
                     <input type="date" name="date_debut" value="">
                 </div>
 
                 <div class="row">
-                    <label>Date fin : </label>
+                    <label>%DIC_DATE_FIN% : </label>
                     <input type="date" name="date_fin" value="">
                 </div>
 
                 <div class="row">
-                    <label>n°Dossier : </label>
+                    <label>%DIC_N_DOSSIER% : </label>
                     <input type="text" name="com_id" value="">
                 </div>
-                 
-                <div class="row">
-                    <label>Chauffeur</label>
-                    <select name="chu_id"></select>
-                </div> 
-                
-                <div class="row">
-                    <label>Statut</label>
-                    <select name="smi_id"></select>
-                </div> 
 
                 <div class="row">
-                    <label>Recherche : </label>
-                    <input type="text" name="recherche" value="" placeholder=" Clients, Contacts, Passagers">
+                    <label>%DIC_RECHERCHE% : </label>
+                    <input type="text" name="recherche" value="" placeholder="%DIC_CLIENTS_AUTRES%">
                 </div>
                 
                 <div class="row_bt">
-                    <div class="submit" id="bt_recherche">RECHERCHER</div> 
+                    <div class="submit" id="bt_recherche">%DIC_RECHERCHER%</div> 
                 </div> 
 
                 <div class="row_bt">
-                    <div class="submit" id="bt_raz">RAZ</div> 
+                    <div class="submit" id="bt_raz">%DIC_RAZ%</div> 
                 </div> 
             </div> 
         </div>
         
-        <div id="creationDossier" class="popup">
-            <div class="formulaire">
-                <div class="row">
-                    <label>Nom du client</label>
-                    <input type="text" value="" name="CLI_SOCIETE">
-                    <input type="hidden" value="" name="CLI_ID">
-                    <input type="hidden" value="" name="COM_ID">
-                    <input type="hidden" value="" name="MIS_ID">
-                </div>
-                
-                <div class="row lc">
-                    <label>Contact demandeur</label>
-                    <select name="COM_COT_ID"></select>
-                </div>
-
-                <div class="grilles row">
-                    <label>Grille du dossier</label>
-                    <select name="COM_GRI_ID" class="grilleSelect"></select>
-                </div>
-
-                <h2>Créer un nouveau contact</h2>
-                
-                <div class="row">
-                    <label>Civilité :</label>
-                    <select class="droit_C_Gen_Contact_modi" name="COT_CIV_ID">
-                        <option value="" label=""></option>
-                        <option value="2" label="Madame">Madame</option>
-                        <option value="1" label="Mademoiselle">Mademoiselle</option>
-                        <option value="3" label="Monsieur">Monsieur</option>
-                    </select>
-                </div>
-                <div class="row">
-                    <label>Nom</label>
-                    <input type="text" class="droit_C_Gen_Contact_modi" name="COT_NOM" value="" placeholder="nom">
-                </div>
-                <div class="row">
-                    <label>Prénom</label>
-                    <input type="text" class="droit_C_Gen_Contact_modi" name="COT_PRENOM" value="" placeholder="prenom">
-                </div>
-                <div class="row">
-                    <label>Email</label>
-                    <input type="email" class="droit_C_Gen_Contact_modi" name="COT_EMAIL" value="" placeholder="email">
-                </div>
-                <div class="row">
-                    <label>Téléphone</label>
-                    <input type="text" class="droit_C_Gen_Contact_modi" name="COT_TELEPHONE" value="" placeholder="telephone">
-                </div>
-                <div class="row">
-                    <label>Mobile</label>
-                    <input type="text" class="droit_C_Gen_Contact_modi" name="COT_MOBILE" value="" placeholder="mobile">
-                </div>
-                
-                <div class="row_bt">
-                    <div class="submit"></div>
-                </div>
-            </div>
-        </div>
 	    
-        <div id="outils" class="popup" style="overflow: hidden;">
-            <a href="http://dev.limovtc.fr/#" onclick="javascript:Mobi.deconnexion(); return false;">Deconnexion</a>
-            <a href="http://dev.limovtc.fr/#" onclick="javascript:Mobi.reload(); return false;">Rechargement complet</a>
-            <a href="http://dev.limovtc.fr/#" onclick="javascript:return Mobi.depannage();">Mode dépannage</a>
+        <div id="outils" class="popup">
+            <a href="#" onclick="javascript:Mobi.deconnexion(); return false;">%DIC_DECONNEXION%</a>
+            <a href="#" onclick="javascript:Mobi.reload(); return false;">%DIC_RECHARGEMENT_COMPLET%</a>
+            <a href="#" onclick="javascript:Jfo.setLoadUpdateReadyFonctions('CTRLF5', function () { location.reload(true); });Jfo.setNoUpdateFonctions('alertNoUpdate', function () { alert('Vous êtes à jour'); });window.applicationCache.update();return false;">%DIC_MISE_A_JOUR%</a>            
+            <a href="#" onclick="javascript:return Mobi.depannage();">%DIC_MODE_DEPANNAGE%</a> 
+            <a href="#" onclick="javascript:return Mobi.ouvreGoogleAgenda();">%DIC_GOOGLE_AGENDA_TITRE%</a>
         </div>
 
     </div>
-   
-  
- 
+    
+    
+    <div style="display:none;">
+    
+    <div class="template_mustache" id="mission">
+        <div id="MIS{{MIS_ID}}" class="mission" data-mis_id="{{MIS_ID}}">
+            <div class="cel libelle">
+                <div class="numDossier" {{{couleurLMI}}}>
+                    <span class="dossier">{{MIS_COM_ID}}</span>
+                    <span class="numero">{{MIS_NUMERO}}</span>
+                    <span class="version">{{MIS_VERSION}}</span>
+                </div>
+            </div>
+            <div class="cel infoDate">
+                {{{date_debut}}}
+            </div>
+            <div class="cel infoLieu clearAfter">
+                <div class="nomLimo">{{limo}}</div>
+                <div class="depart">{{{heure_debut}}} : {{{lieu_prise_en_charge}}}</div>
+                <div class="arrivee">{{{heure_fin}}}   : {{{lieu_depose}}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="template_mustache" id="mission_form">
+        <div id="FORM_MIS{{MIS_ID}}" class="formulaire mission" data-mis_id="{{MIS_ID}}">
+            <div class="barreTitre cel libDossier">
+                <label>%DIC_DETAIL_MISSION%</label>
+                <div class="nomLimo">{{limo}}</div>
+                <span class="dossier">{{MIS_COM_ID}}</span> -
+                <span class="numero">{{MIS_NUMERO}}</span> -
+                <span class="version">{{MIS_VERSION}}</span>
+            </div>     
+            
+            <div class="ref_client"><div class="Int_ref_client">%DIC_REF_CLIENT% : {{MIS_REF_MISSION_CLIENT}}</div></div>    
+            
+            <div class="formulaireInt">
+                <div class="zoneClient clearAfter">
+                    <div class="coordonnees">
+                        <div class="societe">{{{client}}}</div>
+                        <div class="contact">{{contact_nom}}</div>
+                        <div class="contact_tel"><a href="tel:{{contact_tel}}">{{contact_tel}}</a></div>
+                        <div class="contact_mob"><a href="tel:{{contact_mob}}">{{contact_mob}}</a></div>
+                    </div>
+                </div>
+
+                <section class="sectionDetail">
+                    <h2>%DIC_ITINERAIRE% : %DIC_LE% {{{date_debut_texte}}} %DIC_DE% {{{heure_debut}}} %DIC_A% {{{heure_fin}}}</h2>
+                    <div class="detail"><ul class="itineraire">{{{ITINERAIRE}}}</ul></div>
+                </section>
+
+                <div class="clear"></div>
+
+                <section class="sectionDetail" id="sectionPass">
+                    <h2>%DIC_PASSAGERS% : <span class="color bold">{{MIS_PAX}}</span></h2>
+                    <div class="detail">
+                        {{{infoPassager}}}
+                        {{{MIS_LISTE_PASSAGERS}}} 
+                    </div>
+                    
+                </section>
+
+                <section class="sectionDetail ouvrePanneau" id="sectionPanneau">
+                    <h2>%DIC_PANNEAU% : <span class="color bold">{{MIS_PANNEAU}}</span></h2>
+                    <div class="detail">%DIC_VOIR_EN_GRAND%</div>
+                </section>
+
+                <section class="sectionDetail"  id="sectionAuto">
+                    <h2>%DIC_VEHICULE%</h2>
+                    <div class="detail">
+                        <div class="sectionH">{{TVE_LIBELLE}}</div>
+                        <div class="sectionH">{{VOI_LIBELLE}}</div>
+                        <div class="sectionAd"></div>
+                        <div class="clear"></div>
+                    </div>
+                </section>
+                {{#NOTE_CHAUFFEUR}}
+                <section class="sectionDetail">
+                    <h2>%DIC_NOTE_CHAUFFEUR% : </h2>
+                    <div class="detail">{{{NOTE_CHAUFFEUR}}}</div>
+                </section>
+                {{/NOTE_CHAUFFEUR}}
+                <section class="sectionDetail">
+                    <h2>%DIC_PROGRAMME% : </h2>
+                    <div class="detail">{{{PROGRAMME}}}</div>
+                </section>
+                
+            </div>
+                
+            <div class="boutonBas">
+                <div class="btn confirmer">
+                    <span class="icone">ô</span>
+                    <br>%DIC_CONFIRMER%
+                </div>
+                {{#flagBtnHeure}}
+                <div class="btn heures">
+                    <span class="icone">Û</span>
+                    <br>%DIC_KM_ET_HEURE%
+                </div>
+                {{/flagBtnHeure}}
+                <div class="btn frais">
+                    <span class="icone">ñ</span>
+                    <br>%DIC_FRAIS%
+                </div>
+                <div class="btn cloturer">
+                    <span class="icone">n</span>
+                    <br>%DIC_FERMER%
+                </div>
+               
+            </div>
+                
+        </div>
+
+    </div>
+
+    <div class="template_mustache" id="mission_recepisse">
+        <div id="FORM_MIS{{MIS_ID}}" class="formulaire mission" data-mis_id="{{MIS_ID}}">
+            <div id="messageOfficiel">
+                <h1>%DIC_ATTESTATION_VTC%</h1>
+                <span id="exploitant">%DIC_N_EXPLOITANT% : {{{ECO_IMAT_REGISTRE}}}</span>
+                <span id="reglementation">%DIC_TEXTE_REGLEMENTATION%</span>
+           </div>
+
+            <section class="sectionDetail" id="sectionContact">
+                <h2>%DIC_CLIENT%</h2>
+                <div class="detail">
+                    <div class="color">{{{client}}}</div>
+                    <div class="sectionH">{{contact_nom}}</div>
+                    <div class="sectionAd">
+                        <div class="contact_tel"><a href="tel:{{contact_tel}}">{{contact_tel}}</a></div>
+                        <div class="contact_mob"><a href="tel:{{contact_mob}}">{{contact_mob}}</a></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+            
+            <section class="sectionDetail" id="dateResa">
+                <h2>%DIC_RESA_ENREGISTREE%</h2>
+                <div class="detail">
+                    %DIC_LE% {{date_dossier}} %DIC_A% {{{heure_dossier}}}
+                </div>
+            </section>
+     
+            
+            <section class="sectionDetail">
+                <h2>%DIC_ITINERAIRE% : %DIC_LE% {{{date_debut}}} %DIC_DE% {{{heure_debut}}} %DIC_A% {{{heure_fin}}}</h2>
+                <div class="detail"><ul class="itineraire">{{{ITINERAIRE}}}</ul></div>
+            </section>
+
+            <section class="sectionDetail"  id="sectionAuto">
+                <h2>%DIC_VEHICULE%</h2>
+                <div class="detail">
+                    Type : {{TVE_LIBELLE}}<br>
+                    {{VOI_LIBELLE}}
+                </div>
+            </section>
+            <section class="sectionDetail" id="sectionPass">
+                <h2>%DIC_PASSAGERS%<span class="color bold">{{MIS_PAX}}</span></h2>
+                <div class="detail">
+                    {{{infoPassager}}}
+                    {{{MIS_LISTE_PASSAGERS}}}
+                </div>
+            </section>
+                
+        </div>
+
+    </div>
+
+    <div class="template_mustache" id="mission_frais">
+        <div id="FORM_MIS{{MIS_ID}}" class="formulaire mission" data-mis_id="{{MIS_ID}}">
+            <div class="row" id="row_MIS_REPAS_QTE">
+                <label for="MIS_REPAS_QTE" class="optional">%DIC_REPAS% :</label>
+                <select name="MIS_REPAS_QTE" id="MIS_REPAS_QTE" placeholder="" class="simple" dossierFichierFiltre="" valeurMin="0" valeurMax="2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+
+            <div class="row" id="row_MIS_PEAGE">
+                <label for="MIS_PEAGE" class="optional">%DIC_PEAGE% :</label>
+                <input type="text" name="MIS_PEAGE" id="MIS_PEAGE"     value="{{MIS_PEAGE}}" placeholder="" class="simple" dossierFichierFiltre="">
+                <p class="description">€</p>
+            </div>
+                
+            <div class="row" id="row_MIS_DEBOURS">
+                <label for="MIS_DEBOURS" class="optional">%DIC_DEBOURS% :</label>
+                <input type="text" name="MIS_DEBOURS" id="MIS_DEBOURS"     value="{{MIS_DEBOURS}}" placeholder="" class="simple" dossierFichierFiltre="">
+                <p class="description">€</p>
+            </div>
+            
+            <div class="row" id="row_MIS_PARKING">
+                <label for="MIS_PARKING" class="optional">%DIC_PARKING% :</label>
+                <input type="text" name="MIS_PARKING" id="MIS_PARKING"     value="{{MIS_PARKING}}" placeholder="" class="simple" dossierFichierFiltre="">
+                <p class="description">€</p>
+            </div>
+            
+            <div class="row_are" id="row_MIS_COMMENTAIRE_CHAUFFEUR">
+                <label for="MIS_COMMENTAIRE_CHAUFFEUR" class="optional">%DIC_COMMENTAIRE_MISSION% :</label>
+                <textarea name="MIS_COMMENTAIRE_CHAUFFEUR" id="MIS_COMMENTAIRE_CHAUFFEUR" class="simple" dossierFichierFiltre="" rows="24" cols="80">{{{MIS_COMMENTAIRE_CHAUFFEUR}}}</textarea>
+            </div>
+              
+            <div class="boutonBas">
+                <div class="btn confirmer">
+                    <span class="icone">l</span>
+                    <br>%DIC_ENREGISTRER%
+                </div>
+            </div>    
+        </div>
+
+    </div>
+
+    <div class="template_mustache" id="mission_heure">
+        <div id="FORM_MIS{{MIS_ID}}" class="formulaire mission" data-mis_id="{{MIS_ID}}">
+            <div class="row" id="row_MIS_HEURE_REEL_DEBUT">
+                <label for="MIS_HEURE_REEL_DEBUT" class="optional">%DIC_H_DEBUT_MISSION% :</label>
+                <input type="time" name="MIS_HEURE_REEL_DEBUT" id="MIS_HEURE_REEL_DEBUT"     value="{{MIS_HEURE_REEL_DEBUT}}" placeholder="" class="timeHTML5" dossierFichierFiltre="" title="%DIC_EXEMPLE_HEURE%" type="time">
+                <p class="description">%DIC_HEURE%</p>
+            </div>
+            <table class="etapes">
+                <thead><tr><th>%DIC_ARRIVEE%</th><th>%DIC_départ%</th></tr></thead>
+            {{#etapes}}
+                 <tr>
+                    <td class="espace" colspan="2"></td>
+                 </tr>
+                 <tr>
+                    <td class="libelle" colspan="2">{{{libelle}}}</td>
+                 </tr>
+                 <tr class="champHeure">
+                    <td><input type="time" name="EPR_HEURE_ARRIVER{{EPR_ID}}" value="{{EPR_HEURE_ARRIVER}}" data-epr_id="{{EPR_ID}}" data-role="EPR_HEURE_ARRIVER"></td>
+                    <td><input type="time" name="EPR_HEURE_DEPART{{EPR_ID}}" value="{{EPR_HEURE_DEPART}}"   data-epr_id="{{EPR_ID}}" data-role="EPR_HEURE_DEPART"></td>
+                 </tr>
+            {{/etapes}}
+            </table>
+                        
+            
+            <div class="row" id="row_MIS_HEURE_REEL_FIN">
+                <label for="MIS_HEURE_REEL_FIN" class="optional">%DIC_H_FIN_MISSION% :</label>
+                <input type="time" name="MIS_HEURE_REEL_FIN" id="MIS_HEURE_REEL_FIN"     value="{{MIS_HEURE_REEL_FIN}}" placeholder="" class="timeHTML5" dossierFichierFiltre="" title="%DIC_EXEMPLE_HEURE%" type="time">
+                <p class="description">%DIC_HEURE%</p>
+            </div>
+
+            <div class="row" id="row_MIS_KM_DEBUT">
+                <label for="MIS_KM_DEBUT" class="optional">%DIC_KM_DEBUT_MISSION% :</label>
+                <input type="text" name="MIS_KM_DEBUT" id="MIS_KM_DEBUT"     value="{{MIS_KM_DEBUT}}" placeholder="" class="timeHTML5" dossierFichierFiltre="">
+                <p class="description">%DIC_KM%</p>
+            </div>
+
+            <div class="row" id="row_MIS_KM_FIN">
+                <label for="MIS_KM_FIN" class="optional">%DIC_KM_FIN_MISSION% :</label>
+                <input type="text" name="MIS_KM_FIN" id="MIS_KM_FIN"     value="{{MIS_KM_FIN}}" placeholder="" class="timeHTML5" dossierFichierFiltre="">
+                <p class="description">%DIC_KM%</p>
+            </div>
+            
+            <div class="row_are" id="row_MIS_COMMENTAIRE_CHAUFFEUR">
+                <label for="MIS_COMMENTAIRE_CHAUFFEUR" class="optional">%DIC_COMMENTAIRE% :</label>
+                <textarea name="MIS_COMMENTAIRE_CHAUFFEUR" id="MIS_COMMENTAIRE_CHAUFFEUR" class="simple" dossierFichierFiltre="" rows="24" cols="80">{{{MIS_COMMENTAIRE_CHAUFFEUR}}}</textarea>
+            </div>
+
+              
+            <div class="boutonBas">
+                <div class="btn confirmer">
+                    <span class="icone">l</span>
+                    <br>%DIC_ENREGISTRER% 
+                </div>
+            </div>    
+        </div>
+
+    </div>
+
+    <div class="template_mustache" id="mission_reglement">
+        <div id="FORM_MIS{{MIS_ID}}" class="formulaire mission" data-mis_id="{{MIS_ID}}">
+             <div class="row" id="row_REL_MONTANT_REGLER">
+                <label for="REL_MONTANT_REGLER" class="optional">%DIC_MONTANT_ENCAISSE% :</label>
+                <input type="text" name="REL_MONTANT_REGLER" id="REL_MONTANT_REGLER"     value="{{montant}}" placeholder="" class="simple" dossierFichierFiltre="">
+                  <p class="description">€</p>
+            </div>
+            <div class="row" id="row_REL_MRE_ID">
+                <label for="REL_MRE_ID" class="optional">%DIC_MODE_REGLEMENT% :</label>
+                <select name="REL_MRE_ID" id="REL_MRE_ID" class="simple" dossierFichierFiltre="">
+                    <option value="">...</option>
+                    {{#mres}}
+                        <option value="{{MRE_ID}}">{{MRE_LIBELLE}}</option>
+                    {{/mres}}
+                </select>
+            </div>
+            <div class="row_are" id="row_REL_COMMENTAIRE">
+                <label for="REL_COMMENTAIRE" class="optional">%DIC_COMMENTAIRE% :</label>
+                <textarea name="REL_COMMENTAIRE" id="REL_COMMENTAIRE" class="simple" dossierFichierFiltre="" rows="24" cols="80">{{{REL_COMMENTAIRE}}}</textarea>
+            </div>
+
+              
+            <div class="boutonBas">
+                <div class="btn confirmer">
+                    <span class="icone">l</span>
+                    <br>%DIC_ENREGISTRER%
+                </div>
+            </div>    
+        </div>
+
+    </div>
+
+    <div class="template_mustache" id="mission_google">
+        <div id="FORM_MIS{{MIS_ID}}" class="formulaire mission" data-mis_id="{{MIS_ID}}">
+            {{#compte}}
+                <div class="barreTitre cel libDossier">%DIC_GOOGLE_AGENDA% {{CHU_PRENOM}} {{CHU_NOM}}</div>     
+                <p>
+                    <span>1</span>%DIC_GOOGLE_AGENDA_CREER% 
+                </p>
+                <p>
+                    <span>2</span>
+                    %DIC_GOOGLE_AGENDA_VERIFIER%
+                </p>
+                <a class="lienGoogle" target="_blank" href="https://www.google.com/calendar/gpcal?hl=fr">%DIC_GOOGLE_AGENDA_VOTRE%</a>
+            {{/compte}}
+            <p><em>%DIC_GOOGLE_AGENDA_PARAMET%</em></p>
+        
+            <div class="row"> 
+                <label>%DIC_UTILISATEUR%</label>
+                <input type="text" name="google_login" value="">
+            </div>
+            
+            <div class="row">
+                <label>%DIC_MOT_DE_PASSE%</label>
+                <input type="password" name="google_mdp">
+            </div> 
+            <div class="boutonBas">
+                <div class="btn confirmer">
+                    <span class="icone">l</span>
+                    <br>%DIC_ENREGISTRER%
+                </div>
+            </div>        
+        </div>
+
+    </div>
+        
+    <div class="template_mustache" id="mission_bouton_passager">
+        <div class="passager {{classe}}" data-prs_id="{{PRS_ID}}">
+            <div class="nom">{{{nom}}}</div>
+            <div class="boutons">
+                {{#boutons}}
+                    <div class="btn {{classe}}" data-prs_id="{{PRS_ID}}" data-role="{{role}}">
+                        {{label}}
+                    </div>
+                {{/boutons}}
+                <div class="info">{{{info}}}</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div> 
+    
+    </div>
+    
+    
+
+        
+</body>  
+</html> 
+<script>
+    //depend du limo
+    var currencySymbol   = '€';
+    // depend du chauffeur
+    var LAN_CODE_DEFAULT = 'EN';
+    var metricLocale     = 'km';
+    var formatHeure      = 'militaire';
+    var formatDate       = 'francais';
+    var num = 0;
+</script>
 
                 
-</body></html>
+
+
+        
+            </body>
+</html>
